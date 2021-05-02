@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: Segoe UI;
+  font-weight:500;
+  color:white;
+}
+.bg{
+background-image: url("../images/teams.jpg");
+ background-repeat: no-repeat;
+ /* background-size:100% 204%; */
+ background-size:cover;
+}
+.bg1{
+ background-color:black;
+}
+.content {
+  position: relative;
+  right: 130px;
+  top:150px;
+  background: #2c2c2c;
+  width: 25%;
+  height: 60%;
+  padding: 20px;
+  border-radius: 1px;
+}
+
+.button {
+  background-color: #2c2c2c;
+  border: 0.5px solid #8a8a8a;
+  border-radius: 1px;
+  color: white;
+  padding: 4px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  font-family: Segoe UI;
+  font-weight:500;
+  /*position:relative;
+  top:60px;*/
+}

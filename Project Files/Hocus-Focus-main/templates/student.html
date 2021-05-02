@@ -1,0 +1,56 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+      <meta charset="utf-8">
+        <title>Meeting | Microsoft Teams</title>
+        <link rel="stylesheet" href="{% static 'css/student.css'%}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="{% static '/channels/js/websocketbridge.js' %}"></script>
+</head>
+<body class="bg bg1">
+  <section class="py-5  text-center">
+  <div class="container">
+        <div class="content bg1" >
+        <h3 id="question" style="text-align:center;color:white;font-weight: bold;">Question 1</h3><br>
+        <p class="size" id="what">What did the teacher teach?</p><br>
+        <form method="POST">
+          {%csrf_token%}
+          <div class="row">
+            <div class="col-lg-6">
+                <div class="form-check">
+                  <input class="form-check-input size" type="radio" name="chosenoption" id="flexRadioDefault0">
+                  <label id="label0" class="form-check-label size" for="flexRadioDefault0">Option1</lable>
+                </div><br>
+                <div class="form-check">
+                  <input class="form-check-input size" type="radio" name="chosenoption" id="flexRadioDefault1">
+                  <label id="label1" class="form-check-label size" for="flexRadioDefault1">Option3</label>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                  <div class="form-check">
+                    <input id="token" type="hidden" name="token">
+                    <input class="form-check-input size" type="radio" name="chosenoption" id="flexRadioDefault2">
+                    <label id="label2" class="form-check-label size" for="flexRadioDefault2">Option2</label>
+                  </div><br>
+                  <div class="form-check">
+                    <input class="form-check-input size" type="radio" name="chosenoption" id="flexRadioDefault3">
+                    <label id="label3" class="form-check-label size" for="flexRadioDefault3">Option4</label>
+                  </div>
+            </div>
+        </div>
+        <br>
+        <table>
+          <tr>
+            <td><h5>Score : </h5></td>
+            <td><h5 id="score">0</h5></td>
+          </tr>
+        </table>
+      </form>
+      </div>
+    </div>
+    <script src="{%static 'js/students.js'%}"></script>
+  </body>
+</html>
