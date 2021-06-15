@@ -16,6 +16,9 @@ def student(request):
 
 def startdn(request):
     trigger=Trigger(name=request.POST["course"])
+    # same as this
+    # trigger = Trigger
+    # trigger.name=request.POST["course"]
     trigger.lang=request.POST["lang"]
     trigger.save()
     return HttpResponse(request.POST["course"])
